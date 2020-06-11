@@ -10,26 +10,26 @@
  % :: コマンド名を"\C単語"とすることで，衝突回避とソートの容易さを実現している．  
 \newcommand{\Cstreamline}{  
 \begin{wordcard}  
-	\label{n:streamwise}  
-	\begin{wordEN}  
-		strealine  % :: 英単語を入力  
-	\end{wordEN}  
-	\begin{wordJP}  
-		流線         % :: 日本語訳を入力  
-	\end{wordJP}  
-	\begin{ExSentence}  
-		% :: 例文を入力（省略可）  
-		A streamline is defined as a continuous line within the fluid of which the tangent at any point is in the direction of the velocity at that point.\\  
-		流線は，すべての点での流体の速度の接線方向を連続的につなぎ合わせた線として定義される．  
-	\end{ExSentence}  
-	\begin{wordOr}  
-		% :: 語源を入力（省略可）  
-		stream ← Old English , Old High German : stroum , Greek :   \textgreek{reuma}  
-	\end{wordOr}  
-	\begin{wordNote}  
-		% :: 備考を入力（省略可）  
-		例文は，"D. J. TRITTON, Physical Fluid Dynamics Second Edition, OXFORD SCIENCE PUBLICATIONS, 1988, p. 73" より  
-	\end{wordNote}  
+　\label{n:streamwise}  
+　\begin{wordEN}  
+　　strealine　% :: 英単語を入力  
+　\end{wordEN}  
+　\begin{wordJP}  
+　　流線　　　% :: 日本語訳を入力  
+　\end{wordJP}  
+　\begin{ExSentence}  
+　　% :: 例文を入力（省略可）  
+　　A streamline is defined as a continuous line within the fluid of which the tangent at any point is in the direction of the velocity at that point.\\  
+　　流線は，すべての点での流体の速度の接線方向を連続的につなぎ合わせた線として定義される．  
+　\end{ExSentence}  
+　\begin{wordOr}  
+　　% :: 語源を入力（省略可）  
+　　stream ← Old English , Old High German : stroum , Greek :   \textgreek{reuma}  
+　\end{wordOr}  
+　\begin{wordNote}  
+　　% :: 備考を入力（省略可）  
+　　例文は，"D. J. TRITTON, Physical Fluid Dynamics Second Edition, OXFORD SCIENCE PUBLICATIONS, 1988, p. 73" より  
+　\end{wordNote}  
 \end{wordcard}  
 }  
 なお，単語の長さが長い時は，  
