@@ -1,6 +1,6 @@
-# Vocabularay List を LaTex で作った．
+# Vocabulary List を LaTex で作った．
 ## 動機
-　講義の提出物で，Vocabularay "LIST" を（Excelでなく） PDF で提出することになり，あとで，語の順番を入れ替えたり，語を制限したりしやすくするために，LaTex を用いた Vocabulary List を作成した．
+　講義の提出物で，Vocabulary "LIST" を（Excelでなく） PDF で提出することになり，あとで，語の順番を入れ替えたり，語を制限したりしやすくするために，LaTex を用いた Vocabulary List を作成した．
 
 ## 構造
 　語を wordsheet.sty という style ファイルに集約し，その中で，単語一つずつに \newcommand で command を割り当てていく．こうすることで，style ファイルを擬似的なデータベースとし，そこから，コマンドで語の情報を取得するという形をとった．この時，語のコマンドを語の spell にすることで，Excel などでソートし易くすることができる．それをそのまま貼り付けるだけで良いため，語の情報の制限がしやすくなるようにした．
@@ -39,3 +39,9 @@
 を用いる．それぞれ英単語の幅が，
 
 となっている．
+
+## コンパイル
+　筆者は，pLaTex → dvipdfmx でコンパイルしている．
+
+## Vocabulary List 
+　出力されたものは，それぞれ，index\_normal.pdf と index\_dictionary.pdf が例として出力されている．（一回の操作では，両方出力されない点に注意されたい．）
