@@ -1,0 +1,204 @@
+% :: ギリシャ文字を平文で使いたい場合 === === === === === ===
+\usepackage{verbatim}
+\usepackage{minitoc}
+\usepackage{textgreek}
+\usepackage[utf8]{inputenc}
+\newcommand{\textgreek}[1]{\begingroup\fontencoding{LGR}\selectfont#1\endgroup}
+% :: === === === === === === === === === === === === === ===
+%
+% :: Vocabulary List の layout を設定
+%
+\newcommand{\setlayoutVocabularyList}[0]{
+	\setlength{\hoffset}{-4zw}
+	\setlength{\voffset}{-4\baselineskip}
+	\setlength{\textheight}{44\baselineskip}
+	\addtolength{\textheight}{\topskip}
+	\setlength{\textwidth}{57zw}
+}
+%% :: --- --- --- --- --- --- --- --- --- ---
+%% :: VocaList　タイトル
+%% :: --- --- --- --- --- --- --- --- --- ---
+\newcommand{\setpagetitleVocabularyList}[0]{
+	\noindent
+	\begin{minipage}{.3\textwidth}
+		\LARGE{Vocabulary List}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{.3\textwidth}
+	\begin{flushright}
+		\today
+	\end{flushright}
+	\end{minipage}
+	
+	
+	\noindent
+	\hrulefill
+	\begin{description}
+		\item[Name] 
+		\item[氏名] 
+		\item[Student No.] 
+		\item[UEC E-mail] 
+	\end{description}
+	
+	\begin{description}
+		\item [title]
+		\item [題目]
+	\end{description}
+	\hrulefill
+}
+%
+% :: section の次に来る word card がインデントする問題の解消
+% :: 何故か，\noindent では，解消しなかったので，強引に突破した．
+\newcommand{\vocasection}[1]{
+\subsection*{#1}
+　\\[-0.7cm]}
+%
+% :: wordcard の環境
+%
+\newenvironment{wordcard}{
+	\begin{minipage}{\textwidth}
+	\vspace{1zw}
+}{
+	\end{minipage}
+}
+%
+% :: 英単語を挿入する場所（単語長さ：普通）
+%
+\newenvironment{wordEN}{
+% :: 羅列タイプ === === === === ===
+	\begin{minipage}{.14\textwidth}
+% :: 辞書タイプ === === === === ===
+% 	\begin{minipage}{.19\textwidth}
+% 	\Large \sffamily
+% :: === === === === === === === ===
+	\begin{flushleft}
+}{
+	\end{flushleft}
+	\end{minipage}
+	\hfill
+}
+%
+% :: 日本語を挿入する場所（単語長さ：普通）
+%
+\newenvironment{wordJP}{
+% :: 羅列タイプ === === === === ===
+	\begin{minipage}{.84\textwidth}
+% :: 辞書タイプ === === === === ===
+% 	\begin{minipage}{.79\textwidth}
+% 	\gtfamily
+% :: === === === === === === === ===
+	\begin{flushleft}
+}{
+	\end{flushleft}
+	\end{minipage}
+}
+%
+% :: 英単語を挿入する場所（単語長さ：長め）
+%
+\newenvironment{WordEN}{
+% :: 羅列タイプ === === === === ===
+	\begin{minipage}{.24\textwidth}
+% :: 辞書タイプ === === === === ===
+% 	\begin{minipage}{.34\textwidth}
+% 	\Large \sffamily
+% :: === === === === === === === ===
+	\begin{flushleft}
+}{
+	\end{flushleft}
+	\end{minipage}
+	\hfill
+}
+%
+% :: 日本語を挿入する場所（単語長さ：長め）
+%
+\newenvironment{WordJP}{
+% :: 羅列タイプ === === === === ===
+	\begin{minipage}{.74\textwidth}
+% :: 辞書タイプ === === === === ===
+% 	\begin{minipage}{.64\textwidth}
+% 	\gtfamily
+% :: === === === === === === === ===
+	\begin{flushleft}
+}{
+	\end{flushleft}
+	\end{minipage}
+}
+%
+% :: 英単語を挿入する場所（単語長さ：かなり長め）
+%
+\newenvironment{WORDEN}{
+% :: 羅列タイプ === === === === ===
+	\begin{minipage}{.39\textwidth}
+% :: 辞書タイプ === === === === ===
+% 	\begin{minipage}{.49\textwidth}
+% 	\Large \sffamily
+% :: === === === === === === === ===
+	\begin{flushleft}
+}{
+	\end{flushleft}
+	\end{minipage}
+	\hfill
+}
+%
+% :: 日本語を挿入する場所（単語長さ：かなり長め）
+%
+\newenvironment{WORDJP}{
+% :: 羅列タイプ === === === === ===
+	\begin{minipage}{.69\textwidth}
+% :: 辞書タイプ === === === === ===
+% 	\begin{minipage}{.49\textwidth}
+% 	\gtfamily
+% :: === === === === === === === ===
+	\begin{flushleft}
+}{
+	\end{flushleft}
+	\end{minipage}
+}
+%
+% :: 例文挿入環境
+%
+\newenvironment{ExSentence}{
+	\begin{flushright}
+% :: Example Sentence という title を入れる場合 === === === ===
+% 	\begin{minipage}{.95\textwidth}
+% 	\vspace{0.5zw}
+% 	\noindent \sffamily Example Sentence \vspace{0.5zw}
+% 	\end{minipage}
+% :: === === === === === === === === === === === === === ===
+	\begin{minipage}{.90\textwidth}
+}{
+	\end{minipage}
+	\end{flushright}
+}
+%
+% :: 語源挿入環境
+%
+\newenvironment{wordOr}{
+	\begin{flushright}
+% :: Worde Origin という title を入れる場合 === === === ===
+	\begin{minipage}{.95\textwidth}
+	\vspace{0.5zw}
+	\noindent \sffamily Word Origin \vspace{0.5zw}
+	\end{minipage}
+% :: === === === === === === === === === === === === === ===
+	\begin{minipage}{.90\textwidth}
+}{
+	\end{minipage}
+	\end{flushright}
+}
+%
+% :: Note 挿入環境
+%
+\newenvironment{wordNote}{
+	\begin{flushright}
+% :: Note という title を入れる場合 === === === ===
+	\begin{minipage}{.95\textwidth}
+	\vspace{0.5zw}
+	\noindent \sffamily Notes \vspace{0.5zw}
+	\end{minipage}
+% :: === === === === === === === === === === === === === ===
+	\begin{minipage}{.90\textwidth}
+}{
+	\end{minipage}
+	\end{flushright}
+}
