@@ -7,6 +7,7 @@
 
 　wordsheet 内では，それぞれの語のコマンドが一つの単語カードのように考えている．それぞれのカードは，以下の構造になっている．
 
+```latex
  % :: コマンド名を"\C単語"とすることで，衝突回避とソートの容易さを実現している．  
 \newcommand{\Cstreamline}{  
 \begin{wordcard}  
@@ -31,11 +32,21 @@
 　　例文は，"D. J. TRITTON, Physical Fluid Dynamics Second Edition, OXFORD SCIENCE PUBLICATIONS, 1988, p. 73" より  
 　\end{wordNote}  
 \end{wordcard}  
-}  
-なお，単語の長さが長い時は，  
-\begin{WordEP} ... \end{WordEP} , \begin{WordJP} ... \end{WordJP}  
-の組み合わせ，もしくは，より長い，  
-\begin{WORDEP} ... \end{WORDEP} , \begin{WORDJP} ... \end{WORDJP}  
+}
+```
+
+なお，単語の長さが長い時は，
+
+```latex
+\begin{WordEP} ... \end{WordEP} , \begin{WordJP} ... \end{WordJP}
+```
+
+の組み合わせ，もしくは，より長い，
+
+```latex
+\begin{WORDEP} ... \end{WORDEP} , \begin{WORDJP} ... \end{WORDJP}
+```
+
 を用いる．それぞれ英単語の幅が，
 
 となっている．
